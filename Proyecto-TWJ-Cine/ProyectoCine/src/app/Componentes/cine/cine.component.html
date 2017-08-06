@@ -38,13 +38,13 @@
           <br>
           <br>
           <a [routerLink]="['nuevaContasena']">¿Olvidaste tu contraseña o email?</a>
-
+          <br>
           <br>
           <button type="button" class="btn btn-primary btn-lg btn-block">INICIAR SESION</button>
           <br>
           <h6> ¿Ya tienes Cuenta? </h6>
           <a [routerLink]="['suscribirse']">Suscribirse Ya!</a>
-
+          <br>
           <br>
         </div>
       </div>
@@ -64,6 +64,8 @@
 <div class="col-sm-6"></div>
 </div>
 
+  <router-outlet></router-outlet>
+
 
 </body>
-<router-outlet></router-outlet>
+

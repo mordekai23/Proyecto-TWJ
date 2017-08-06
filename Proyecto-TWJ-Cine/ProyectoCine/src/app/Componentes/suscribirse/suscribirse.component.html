@@ -28,21 +28,24 @@
           </div>
           <br><h4>Nombre y Apellido</h4>
           <input type="text" class="form-control" id="Nombre"
-                 placeholder="Ingrese su Nombre y su Apellido">
-          <br>
+                 placeholder="Ingrese su Nombre y su Apellido"
+                 [(ngModel)]="nuevoUsuario.nombre">
           <br><h4>Email</h4>
           <input type="email" class="form-control" id="Email1"
-                 placeholder="Ingrese su correo electrónico">
+                 placeholder="Ingrese su correo electrónico"
+                 [(ngModel)]="nuevoUsuario.correo" >
           <br>
           <div class="form-group">
             <h4>Contraseña</h4>
             <input type="password" class="form-control" id="password_1"
-                   placeholder="Contraseña">
+                   placeholder="Contraseña"
+                   [(ngModel)]="nuevoUsuario.password">
           </div>
           <br>
           <br>
           <br>
-          <button type="button" class="btn btn-primary btn-lg btn-block">CONTINUAR</button>
+          <button class="btn btn-block" (click)="crearUsuario()">Guardar</button>
+
           <br>
 
           <br>
