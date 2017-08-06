@@ -6,19 +6,22 @@ import { CineComponent } from './Componentes/cine/cine.component';
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import { SuscribirseComponent } from './Componentes/suscribirse/suscribirse.component';
-import { NuevaContraseñaComponent } from './Componentes/nueva-contraseña/nueva-contraseña.component';
+import {  NuevaContrasenaComponent,} from './Componentes/nueva-contrasena/nueva-contrasena.component';
+import {ModuloDeRutas} from "./routes";
 
 @NgModule({
   declarations: [
     AppComponent,
     CineComponent,
     SuscribirseComponent,
-    NuevaContraseñaComponent
+    NuevaContrasenaComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ModuloDeRutas
   ],
   providers: [],
   bootstrap: [CineComponent]
