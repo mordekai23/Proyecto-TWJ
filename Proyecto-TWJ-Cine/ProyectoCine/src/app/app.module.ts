@@ -8,6 +8,8 @@ import {HttpModule} from "@angular/http";
 import { SuscribirseComponent } from './Componentes/suscribirse/suscribirse.component';
 import {  NuevaContrasenaComponent,} from './Componentes/nueva-contrasena/nueva-contrasena.component';
 import {ModuloDeRutas} from "./routes";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {ModuloDeRutas} from "./routes";
     BrowserModule,
     FormsModule,
     HttpModule,
-    ModuloDeRutas
+    ModuloDeRutas,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [CineComponent]

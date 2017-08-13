@@ -2,19 +2,21 @@ import {SuscribirseComponent} from "./Componentes/suscribirse/suscribirse.compon
 import {RouterModule, Routes} from "@angular/router";
 import {NuevaContrasenaComponent} from "./Componentes/nueva-contrasena/nueva-contrasena.component";
 import {ModuleWithProviders} from "@angular/core";
+import {AppComponent} from "./app.component";
+
 /**
  * Created by Pc Xtreme on 06/08/2017.
  */
 export const routes: Routes = [
   {
-    path:"suscribirse",
+    path:"Suscribirse",
     component:SuscribirseComponent
-
   },
   {
-    path:"nuevaContasena",
+    path:"NuevaContasena",
     component:NuevaContrasenaComponent
   }
 ];
 export const ModuloDeRutas: ModuleWithProviders =
   RouterModule.forRoot(routes);
+
