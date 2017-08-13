@@ -10,15 +10,16 @@ module.exports = {
   attributes: {
     nombre:{
       type:'string'
+
     },
     correo:{
-      type:'email'
+      type:'string'
+
     },
     password:{
-      type:'string',
-      required:true
-    }
+      type:'string'
 
+    }
   }
 };
 

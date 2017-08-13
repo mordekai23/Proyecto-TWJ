@@ -5,40 +5,35 @@
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
 
-    <form role="form" style="background-color: #e6e6e6">
+    <div class="form-group" style="background-color: #e6e6e6">
+      <br><br>
       <div class="container">
-        <div class="form-group">
+        <div align="center">
 
-          <div align="center">
-            <br><br>
-            <h1>Suscribete</h1>
-          </div>
-          <br><h4>Nombre y Apellido</h4>
-          <input type="text" class="form-control" id="Nombre"
-                 placeholder="Ingrese su Nombre y su Apellido"
-                 [(ngModel)]="nuevoUsuario.nombre">
-          <br><h4>Email</h4>
-          <input type="email" class="form-control" id="Email1"
-                 placeholder="Ingrese su correo electrónico"
-                 [(ngModel)]="nuevoUsuario.correo" >
-          <br>
-          <div class="form-group">
+          <h1>Suscribete</h1>
+          <!-- Recive al input-->
+        </div>
+        <div class="card" style="width: 32rem; background: transparent">
+          <div class="card-block">
+            <br><h4>Nombre</h4>
+            <input class="form-control"
+                   placeholder="Ingrese el Nombre"
+                   [(ngModel)]="nuevoUsuario.nombre" type="text">
+            <br><h4>Email</h4>
+            <input class="form-control"
+                   placeholder="Ingrese el Email"
+                   [(ngModel)]="nuevoUsuario.correo" type="text"><br>
             <h4>Contraseña</h4>
-            <input type="password" class="form-control" id="password_1"
-                   placeholder="Contraseña"
-                   [(ngModel)]="nuevoUsuario.password">
+            <input class="form-control"
+                   placeholder="Ingrese la Contraseña"
+                   [(ngModel)]="nuevoUsuario.password" type="text">
           </div>
+          <button class="btn btn-primary btn-lg btn-block" (click)="crearUsuario()">Guardar</button>
           <br>
-          <br>
-          <br>
-          <button class="btn btn-block" (click)="crearUsuario()">Guardar</button>
-
-          <br>
-
           <br>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 <div class="col-sm-4"></div>

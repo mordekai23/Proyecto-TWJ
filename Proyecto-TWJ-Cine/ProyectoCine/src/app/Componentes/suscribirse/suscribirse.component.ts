@@ -9,12 +9,12 @@ import {UsuarioClass} from "../../Clases/Usuario";
 })
 export class SuscribirseComponent implements OnInit {
 
-  nombre: string = "";
-  correo: string = "";
+  nombre: string= "";
+  correo: string= "";
   password: string = "";
 
 
-  cine: UsuarioClass [] = [];
+  usuarios: UsuarioClass [] = [];
   nuevoUsuario: UsuarioClass = new UsuarioClass();
 
   constructor(private _http: Http) {
@@ -27,8 +27,8 @@ export class SuscribirseComponent implements OnInit {
         respuesta => {
           let respJson: UsuarioClass[] = respuesta.json();
           console.log("respuesta json:", respJson);
-          this.cine = respJson;
-          console.log("NUsuarioEnCine: ", this.cine);
+          this.usuarios = respJson;
+          console.log("Usuarios: ", this.usuarios);
         },
         error => {
           console.log("Error", error)
@@ -43,7 +43,7 @@ export class SuscribirseComponent implements OnInit {
         respuesta => {
           let respuestaJson = respuesta.json();
           console.log('respuestaJson: ', respuestaJson);
-          this.cine.push(respuestaJson);
+          this.usuarios.push(respuestaJson);
         },
         error => {
           console.log("Error", error)
