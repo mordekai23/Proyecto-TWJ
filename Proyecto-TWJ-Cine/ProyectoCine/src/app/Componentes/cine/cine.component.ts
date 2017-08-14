@@ -10,9 +10,13 @@ import {UsuarioClass} from "../../Clases/Usuario";
   styleUrls: ['./cine.component.css']
 })
 export class CineComponent implements OnInit {
- // cine: UsuarioClass []= [];
- // nuevoUsuario: UsuarioClass = new UsuarioClass();
+  nombre: string= "";
+  correo: string= "";
+  password: string = "";
 
+
+  usuarios: UsuarioClass [] = [];
+  nuevoUsuario: UsuarioClass = new UsuarioClass();
   constructor() { }
 
   ngOnInit() {
