@@ -9,14 +9,15 @@ import { SuscribirseComponent } from './Componentes/suscribirse/suscribirse.comp
 import {  NuevaContrasenaComponent,} from './Componentes/nueva-contrasena/nueva-contrasena.component';
 import {ModuloDeRutas} from "./routes";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-
+import {SinEspacios} from './validaciones';
 
 @NgModule({
   declarations: [
     AppComponent,
     CineComponent,
     SuscribirseComponent,
-    NuevaContrasenaComponent
+    NuevaContrasenaComponent,
+    SinEspacios
 
   ],
   imports: [

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import {UsuarioClass} from "../../Clases/Usuario";
+import {Form} from "@angular/forms";
 
 @Component({
   selector: 'app-suscribirse',
@@ -36,8 +37,9 @@ export class SuscribirseComponent implements OnInit {
       )
   }
 
-  crearUsuario() {
+  crearUsuario(UsuarioFormulario) {
     console.log("Guardo los datos");
+    console.log(UsuarioFormulario);
     this._http.post('http://localhost:1337/Usuario', this.nuevoUsuario)
       .subscribe(
         respuesta => {
