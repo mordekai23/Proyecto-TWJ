@@ -16,6 +16,8 @@ import {AuthService} from "./services/auth.service";
 import {EstaLogeadoService} from "./services/esta-logeado.service";
 import {ApiAuthService} from "./services/api-auth.service";
 import {TokenService} from "./services/token.service";
+import { LoginComponent } from './Componentes/login/login.component';
+import { InicioComponent } from './Componentes/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {TokenService} from "./services/token.service";
     CineComponent,
     SuscribirseComponent,
     NuevaContrasenaComponent,
-    SinEspacios
+    SinEspacios,
+    LoginComponent,
+    InicioComponent
 
   ],
   imports: [
@@ -31,6 +35,8 @@ import {TokenService} from "./services/token.service";
     FormsModule,
     HttpModule,
     ModuloDeRutas,
+    LoginComponent,
+    InicioComponent,
     NgbModule.forRoot()
   ],
   providers: [

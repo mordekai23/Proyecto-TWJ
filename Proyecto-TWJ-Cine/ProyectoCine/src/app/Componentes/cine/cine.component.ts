@@ -12,20 +12,20 @@ import {TokenService} from "../../services/token.service";
   styleUrls: ['./cine.component.css']
 })
 export class CineComponent implements OnInit {
-  nombre: string= "";
-  correo: string= "";
-  password: string = "";
+  correo:string;
+  password:string;
 
-
-  usuarios: UsuarioClass [] = [];
-  nuevoUsuario: UsuarioClass = new UsuarioClass();
   constructor(private _tokenService:TokenService,
-+              private _authService:AuthService) { }
-
+              private _authService:AuthService) { }
   ngOnInit() {
-  console.log(this._tokenService.token)
-  }
+    console.log(this._tokenService.token)
+     }
+
   logearse(){
-        this._authService.hacerLogin(this.correo,this.password);
-      }
+      this._authService.hacerLogin(this.correo,this.password);
+    }
+
+  desLogearse(){
+      this._authService.hacerLogout();
+}
 }
