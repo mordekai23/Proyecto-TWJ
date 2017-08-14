@@ -10,6 +10,12 @@ import {  NuevaContrasenaComponent,} from './Componentes/nueva-contrasena/nueva-
 import {ModuloDeRutas} from "./routes";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {SinEspacios} from './validaciones';
+import {UsuarioService} from "./services/usuario.service";
+import {MasterUrlService} from "./services/master-url.service";
+import {AuthService} from "./services/auth.service";
+import {EstaLogeadoService} from "./services/esta-logeado.service";
+import {ApiAuthService} from "./services/api-auth.service";
+import {TokenService} from "./services/token.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +33,14 @@ import {SinEspacios} from './validaciones';
     ModuloDeRutas,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    UsuarioService,
+    MasterUrlService,
+    AuthService,
+    EstaLogeadoService,
+    ApiAuthService,
+    TokenService,
+  ],
   bootstrap: [CineComponent]
 })
 export class AppModule { }
