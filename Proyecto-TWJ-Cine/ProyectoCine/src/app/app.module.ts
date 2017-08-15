@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { CineComponent } from './Componentes/cine/cine.component';
 import {FormsModule} from "@angular/forms";
@@ -28,7 +27,6 @@ import { InicioComponent } from './Componentes/inicio/inicio.component';
     //SinEspacios,
    // LoginComponent,
     //InicioComponent
-
   ],
   imports: [
     BrowserModule,

@@ -12,9 +12,8 @@ import {TokenService} from "../../services/token.service";
   styleUrls: ['./cine.component.css']
 })
 export class CineComponent implements OnInit {
-  nombre: string= "";
-  correo: string= "";
-  password: string = "";
+  cine: UsuarioClass []= [];
+  nuevoUsuario: UsuarioClass = new UsuarioClass();
 
   constructor() { }
 

@@ -1,7 +1,7 @@
 <body style="background-color: black">
-<!--1 Fila-->
 <form (ngSubmit)="ngSubmit()" #UsuarioFormulario="ngForm"
       novalidate>
+<!--1 Fila-->
 <div class="row">
   <div class="col-sm-3"></div>
   <div class="col-sm-6">
@@ -17,7 +17,119 @@
   </div>
 </div>
 <HR NOSHADE WIDTH=1100 SIZE=5>
-<!--2 Fila-->
+<!--1 Fila-->
+
+  <br>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+
+      <div class="form-group" style="background-color: #e6e6e6">
+        <br><br>
+        <div class="container">
+          <div align="center">
+            <h1>INICIAR SESION</h1>
+          </div>
+
+          <div class="form-group" style="background-color: #e6e6e6">
+            <div class="container">
+              <br><h4>Email</h4>
+              <input class="form-control"
+                     required
+                     minlength="3"
+                     maxlength="15"
+                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                     placeholder="Ingrese el Email"
+                     [(ngModel)]="nuevoUsuario.correo" type="email" name="correo"
+                     #correo="ngModel"
+                     #correoTAG><br>
+              <!--Alertas-->
+              <div *ngIf="correo.errors?.minlength&&correo.touched==true"
+                   class="alert alert-warning animated bounceIn"
+                   role="alert">
+                <strong></strong> Debes llenar el campo desde 3 hasta 15 caracteres.
+              </div>
+              <div
+                *ngIf="correo.errors?.required&&correo.touched==true"
+                class="alert alert-danger animated bounceIn" role="alert">
+                <strong>¡Peligro!</strong> Este campo es requerido.
+              </div>
+              <div *ngIf="correo.errors?.pattern&&correo.touched==true"
+                   class="alert alert-warning animated bounceIn"
+                   role="alert">
+                <strong></strong> Debe ingresar nombre@algo.com.
+              </div>
+            </div>
+          </div>
+          <div class="form-group" style="background-color: #e6e6e6">
+            <div class="container">
+              <h4>Contraseña</h4>
+              <input class="form-control"
+                     required
+                     pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+                     placeholder="Ingrese la Contraseña"
+                     [(ngModel)]="nuevoUsuario.password" type="password" name="password"
+                     #password="ngModel"
+                     #passwordTAG><br>
+              <!--Alertas-->
+              <div
+                *ngIf="password.errors?.required&&password.touched==true"
+                class="alert alert-danger animated bounceIn" role="alert">
+                <strong>¡Peligro!</strong> Este campo es requerido.
+              </div>
+              <div *ngIf="password.errors?.pattern&&password.touched==true"
+                   class="alert alert-warning animated bounceIn"
+                   role="alert">
+                <strong></strong> Debe ingresar correctamente la contraseña.
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <br>
+            <a [routerLink]="['NuevaContasena']">¿Olvidaste tu contraseña o email?</a>
+            <br>
+            <br>
+            <button class="btn btn-primary btn-lg btn-block" [disabled]="!UsuarioFormulario.valid">INICIAR SESION
+            </button>
+            <br>
+            <h6> ¿Ya tienes Cuenta? </h6>
+            <a [routerLink]="['Suscribirse']">Suscribirse Ya!</a>
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4"></div>
+  <router-outlet></router-outlet>
+</form>
+</body>
+
+
+
+
+
+
+<!--
+<body style="background-color: black">
+<!--1 Fila--
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <br> <br>
+    <div class="container">
+      <div align="center">
+        <img src="assets/imagenes/logo.png" width="350"
+             height="250" alt="LogoEPN">
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<HR NOSHADE WIDTH=1100 SIZE=5>
+<!--2 Fila--
 
   <br>
   <div class="row">
@@ -41,7 +153,7 @@
                    [(ngModel)]="nuevoUsuario.correo" type="email" name="correo"
                    #correo="ngModel"
                    #correoTAG><br>
-            <!--Alertas-->
+            <!--Alertas--
             <div *ngIf="correo.errors?.minlength&&correo.touched==true"
                  class="alert alert-warning animated bounceIn"
                  role="alert">
@@ -85,27 +197,64 @@
             <br>
             <br>
             <button type="button" class="btn btn-primary btn-lg btn-block" >INICIAR SESION</button>
-                    <!--(click)="logearse()"-->
+                    <!--(click)="logearse()"--
             <br>
             <h6> ¿Ya tienes Cuenta? </h6>
             <a [routerLink]="['Suscribirse']">Suscribirse Ya!</a>
-
-            <br>
-            <br>
-
           </div>
-          <h5>¿Tienes problemas? <br><br>Contáctanos : peliculas@gmail.com</h5>
-          <br>
-        </div>
+<br>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
 
+
+    <form role="form" style="background-color: #e6e6e6">
+      <div class="container">
+        <div class="form-group">
+
+          <div align="center">
+            <br><br>
+            <h1>Iniciar Sesión</h1>
+          </div>
+          <br><h4>Email</h4>
+          <input type="email" class="form-control" id="Email1"
+                 placeholder="nombre@ejemplo.com">
+          <br>
+          <div class="form-group">
+            <h4>Contraseña</h4>
+            <input type="password" class="form-control" id="password_1"
+                   placeholder="Contraseña">
+          </div>
+          <br>
+          <br>
+          <a [routerLink]="['NuevaContasena']">¿Olvidaste tu contraseña o email?</a>
+          <br>
+          <br>
+          <button type="button" class="btn btn-primary btn-lg btn-block">INICIAR SESION</button>
+          <br>
+          <h6> ¿Ya tienes Cuenta? </h6>
+          <a [routerLink]="['Suscribirse']">Suscribirse Ya!</a>
+
+          <br>
+          <br>
+
+        </div>
+        <h5>¿Tienes problemas? <br><br>Contáctanos : peliculas@gmail.com</h5>
+        <br>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="col-sm-4"></div>
+<HR NOSHADE WIDTH=1100 SIZE=5>
+
+<router-outlet></router-outlet>
+        </div>
       </form>
     </div>
   </div>
-
-  <div class="col-sm-4"></div>
-  <HR NOSHADE WIDTH=1100 SIZE=5>
-
-  <router-outlet></router-outlet>
-</form>
 </body>
 
+-->
