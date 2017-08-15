@@ -25,9 +25,9 @@ import { InicioComponent } from './Componentes/inicio/inicio.component';
     CineComponent,
     SuscribirseComponent,
     NuevaContrasenaComponent,
-    SinEspacios,
-    LoginComponent,
-    InicioComponent
+    //SinEspacios,
+   // LoginComponent,
+    //InicioComponent
 
   ],
   imports: [
@@ -35,17 +35,17 @@ import { InicioComponent } from './Componentes/inicio/inicio.component';
     FormsModule,
     HttpModule,
     ModuloDeRutas,
-    LoginComponent,
-    InicioComponent,
+    //LoginComponent,
+    //InicioComponent,
     NgbModule.forRoot()
   ],
   providers: [
-    UsuarioService,
+    /*UsuarioService,
     MasterUrlService,
     AuthService,
     EstaLogeadoService,
     ApiAuthService,
-    TokenService,
+    TokenService,*/
   ],
   bootstrap: [CineComponent]
 })

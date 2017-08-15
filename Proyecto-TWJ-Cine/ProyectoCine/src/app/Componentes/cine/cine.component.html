@@ -40,7 +40,7 @@
                    placeholder="Ingrese el Email"
                    [(ngModel)]="nuevoUsuario.correo" type="email" name="correo"
                    #correo="ngModel"
-                   #correoTAG>
+                   #correoTAG><br>
             <!--Alertas-->
             <div *ngIf="correo.errors?.minlength&&correo.touched==true"
                  class="alert alert-warning animated bounceIn"
@@ -84,7 +84,8 @@
             <a [routerLink]="['NuevaContasena']">¿Olvidaste tu contraseña o email?</a>
             <br>
             <br>
-            <button type="button" class="btn btn-primary btn-lg btn-block" (click)="logearse()">INICIAR SESION</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" >INICIAR SESION</button>
+                    <!--(click)="logearse()"-->
             <br>
             <h6> ¿Ya tienes Cuenta? </h6>
             <a [routerLink]="['Suscribirse']">Suscribirse Ya!</a>

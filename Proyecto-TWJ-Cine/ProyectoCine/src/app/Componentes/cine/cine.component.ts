@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Http} from "@angular/http";
 import {UsuarioClass} from "../../Clases/Usuario";
-;
+
 import {AuthService} from "../../services/auth.service";
 import {TokenService} from "../../services/token.service";
 
@@ -12,20 +12,32 @@ import {TokenService} from "../../services/token.service";
   styleUrls: ['./cine.component.css']
 })
 export class CineComponent implements OnInit {
-  correo:string;
-  password:string;
+  nombre: string= "";
+  correo: string= "";
+  password: string = "";
 
-  constructor(private _tokenService:TokenService,
-              private _authService:AuthService) { }
+  constructor() { }
+
   ngOnInit() {
-    console.log(this._tokenService.token)
-     }
+  }
 
-  logearse(){
+}
+
+  /*constructor() { }
+  /*
+  * private _tokenService:TokenService,
+   private _authService:AuthService*/
+ /* ngOnInit() {
+    console.log()
+     }
+/*this._tokenService.token
+  /*logearse(){
       this._authService.hacerLogin(this.correo,this.password);
     }
 
   desLogearse(){
       this._authService.hacerLogout();
-}
-}
+}*/
+/*}
+
+ */

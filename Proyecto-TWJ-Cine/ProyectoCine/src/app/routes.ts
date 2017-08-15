@@ -10,13 +10,13 @@ import {InicioComponent} from "./Componentes/inicio/inicio.component";
  * Created by Pc Xtreme on 06/08/2017.
  */
 export const routes: Routes = [
-  {
+ /* {
     path:"inicio",
     component:InicioComponent,
       canActivate: [
         EstaLogeadoService
      ]
-},
+},*/
   {
     path:"Suscribirse",
     component:SuscribirseComponent
