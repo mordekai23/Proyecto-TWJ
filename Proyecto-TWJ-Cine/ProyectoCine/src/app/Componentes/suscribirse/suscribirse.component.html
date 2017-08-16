@@ -1,6 +1,7 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
 <body style="background-color: black">
 <!--1 Fila-->
-<form (ngSubmit)="ngSubmit()" #UsuarioFormulario="ngForm"
+<form (ngSubmit)="crearUsuario(UsuarioFormulario)" #UsuarioFormulario="ngForm"
       novalidate>
   <br>
   <div class="row">
@@ -33,12 +34,12 @@
             <div
               *ngIf="nombre.errors?.required&&nombre.touched==true"
               class="alert alert-danger animated bounceIn" role="alert">
-              <strong>¡Peligro!</strong> Este campo es requerido.
+              Este campo es requerido.
             </div>
             <div *ngIf="nombre.errors?.pattern&&nombre.touched==true"
                  class="alert alert-warning animated bounceIn"
                  role="alert">
-              <strong></strong> Este Campo debe empezar con mayusculas.
+              Este Campo debe empezar con mayusculas.
             </div>
 
           </div>
@@ -58,17 +59,17 @@
               <div *ngIf="correo.errors?.minlength&&correo.touched==true"
                    class="alert alert-warning animated bounceIn"
                    role="alert">
-                <strong></strong> Debes llenar el campo desde 3 hasta 15 caracteres.
+                Debes llenar el campo desde 3 hasta 15 caracteres.
               </div>
               <div
                 *ngIf="correo.errors?.required&&correo.touched==true"
                 class="alert alert-danger animated bounceIn" role="alert">
-                <strong>¡Peligro!</strong> Este campo es requerido.
+                Este campo es requerido.
               </div>
               <div *ngIf="correo.errors?.pattern&&correo.touched==true"
                    class="alert alert-warning animated bounceIn"
                    role="alert">
-                <strong></strong> Debe ingresar nombre@algo.com.
+                Debe ingresar nombre@algo.com.
               </div>
             </div>
           </div>
@@ -86,18 +87,17 @@
               <div
                 *ngIf="password.errors?.required&&password.touched==true"
                 class="alert alert-danger animated bounceIn" role="alert">
-                <strong>¡Peligro!</strong> Este campo es requerido.
+                Este campo es requerido.
               </div>
               <div *ngIf="password.errors?.pattern&&password.touched==true"
                    class="alert alert-warning animated bounceIn"
                    role="alert">
-                <strong></strong> Debe ingresar correctamente la contraseña.
+                Debe ingresar correctamente la contraseña.
               </div>
             </div>
           </div>
           <div class="container">
-            <button class="btn btn-primary btn-lg btn-block" [disabled]="!UsuarioFormulario.valid"
-                    (click)="crearUsuario()">Guardar
+            <button class="btn btn-primary btn-lg btn-block" [disabled]="!UsuarioFormulario.valid">Guardar
             </button>
           </div>
         </div>

@@ -20,9 +20,7 @@ export class UsuarioService {
     this.headers = new Headers();
     this.headers.append('Authorization', 'bearer '
       + this._tokenService.token);
-
   }
-
   crear(usuario:UsuarioClass){
     let datosAEnviar = {
       nombre:usuario.nombre,
@@ -34,40 +32,4 @@ export class UsuarioService {
         return res.json()
       })
   }
-
-  borrar(usuario:UsuarioClass){
-    return this._http
-      .delete(this.url+`/${usuario.id}`)
-      .map(res => {
-        return res.json()
-      })
-  }
-
-  editar(usuario:UsuarioClass){
-    let datosAEnviar = {
-      nombre:usuario.nombre
-    };
-    return this._http
-      .put(this.url+`/${usuario.id}`,datosAEnviar)
-      .map(res => {
-        return res.json()
-      })
-  }
-
-  buscarUnoPorId(id:number){
-    return this._http
-      .get(this.url+`/${id}`)
-      .map(res => {
-        return res.json()
-      })
-  }
-
-  buscarTodos(){
-    return this._http
-      .get(this.url)
-      .map(res => {
-        return res.json()
-      })
-  }
-
 }

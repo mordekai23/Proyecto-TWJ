@@ -8,15 +8,16 @@ import { SuscribirseComponent } from './Componentes/suscribirse/suscribirse.comp
 import {  NuevaContrasenaComponent,} from './Componentes/nueva-contrasena/nueva-contrasena.component';
 import {ModuloDeRutas} from "./routes";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import {SinEspacios} from './validaciones';
 import {UsuarioService} from "./services/usuario.service";
 import {MasterUrlService} from "./services/master-url.service";
 import {AuthService} from "./services/auth.service";
 import {EstaLogeadoService} from "./services/esta-logeado.service";
 import {ApiAuthService} from "./services/api-auth.service";
 import {TokenService} from "./services/token.service";
-import { LoginComponent } from './Componentes/login/login.component';
-import { InicioComponent } from './Componentes/inicio/inicio.component';
+import { VistaPrincipalComponent } from './Componentes/vista-principal/vista-principal.component';
+import { VistaPeliUnoComponent } from './Componentes/vista-peli-uno/vista-peli-uno.component';
+import { VistaPeliDosComponent } from './Componentes/vista-peli-dos/vista-peli-dos.component';
+
 
 @NgModule({
   declarations: [
@@ -24,26 +25,25 @@ import { InicioComponent } from './Componentes/inicio/inicio.component';
     CineComponent,
     SuscribirseComponent,
     NuevaContrasenaComponent,
-    //SinEspacios,
-   // LoginComponent,
-    //InicioComponent
+    VistaPrincipalComponent,
+    VistaPeliUnoComponent,
+    VistaPeliDosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ModuloDeRutas,
-    //LoginComponent,
-    //InicioComponent,
     NgbModule.forRoot()
   ],
   providers: [
-    /*UsuarioService,
-    MasterUrlService,
-    AuthService,
     EstaLogeadoService,
+    MasterUrlService,
+    TokenService,
     ApiAuthService,
-    TokenService,*/
+    UsuarioService,
+    AuthService
+
   ],
   bootstrap: [CineComponent]
 })

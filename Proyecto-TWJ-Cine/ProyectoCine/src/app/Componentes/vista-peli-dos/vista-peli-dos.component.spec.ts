@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
+import { VistaPeliDosComponent } from './vista-peli-dos.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('VistaPeliDosComponent', () => {
+  let component: VistaPeliDosComponent;
+  let fixture: ComponentFixture<VistaPeliDosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ VistaPeliDosComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(VistaPeliDosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

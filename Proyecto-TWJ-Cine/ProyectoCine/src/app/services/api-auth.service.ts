@@ -22,7 +22,7 @@ export class ApiAuthService {
 
     return this._http
       .post(this.url + metodo, datosAEnviar)
-    //.map(res => res.json());
+
   }
 
 }

@@ -4,19 +4,23 @@ import {NuevaContrasenaComponent} from "./Componentes/nueva-contrasena/nueva-con
 import {ModuleWithProviders} from "@angular/core";
 import {AppComponent} from "./app.component";
 import {EstaLogeadoService} from "./services/esta-logeado.service";
-import {InicioComponent} from "./Componentes/inicio/inicio.component";
 
 /**
  * Created by Pc Xtreme on 06/08/2017.
  */
 export const routes: Routes = [
- /* {
-    path:"inicio",
-    component:InicioComponent,
-      canActivate: [
-        EstaLogeadoService
-     ]
-},*/
+  {
+    path:"PeliUno",
+    component:SuscribirseComponent
+  },
+  {
+    path:"PeliDos",
+    component:SuscribirseComponent
+  },
+  {
+    path:"Principal",
+    component:SuscribirseComponent
+  },
   {
     path:"Suscribirse",
     component:SuscribirseComponent

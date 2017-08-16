@@ -3,6 +3,7 @@ import {Http} from "@angular/http";
 import {UsuarioClass} from "../../Clases/Usuario";
 import {Form} from "@angular/forms";
 
+
 @Component({
   selector: 'app-suscribirse',
   templateUrl: './suscribirse.component.html',
@@ -46,12 +47,19 @@ export class SuscribirseComponent implements OnInit {
           let respuestaJson = respuesta.json();
           console.log('respuestaJson: ', respuestaJson);
           this.usuarios.push(respuestaJson);
+          console.log('Creado!')
+          this.limpiar();
         },
         error => {
           console.log("Error", error)
         }
       )
   }
+  limpiar(){
+    this.nuevoUsuario.nombre=" ";
+    this.nuevoUsuario.correo=" ";
+    this.nuevoUsuario.password=" ";
 
+  }
 
 }
