@@ -4,22 +4,34 @@ import {NuevaContrasenaComponent} from "./Componentes/nueva-contrasena/nueva-con
 import {ModuleWithProviders} from "@angular/core";
 import {AppComponent} from "./app.component";
 import {EstaLogeadoService} from "./services/esta-logeado.service";
+import {PrincipalComponent} from "./Componentes/principal/principal.component";
+import {VistaPeliDosComponent} from "./Componentes/vista-peli-dos/vista-peli-dos.component";
+import {VistaPeliUnoComponent} from "./Componentes/vista-peli-uno/vista-peli-uno.component";
+import {CineComponent} from "./Componentes/cine/cine.component";
 
 /**
  * Created by Pc Xtreme on 06/08/2017.
  */
 export const routes: Routes = [
   {
+    path:"InicioCine",
+    component:CineComponent,
+    canActivate: [
+      EstaLogeadoService
+    ]
+  },
+  {
     path:"PeliUno",
-    component:SuscribirseComponent
+    component:VistaPeliUnoComponent
   },
   {
     path:"PeliDos",
-    component:SuscribirseComponent
+    component:VistaPeliDosComponent
   },
   {
     path:"Principal",
-    component:SuscribirseComponent
+    component:PrincipalComponent
+
   },
   {
     path:"Suscribirse",

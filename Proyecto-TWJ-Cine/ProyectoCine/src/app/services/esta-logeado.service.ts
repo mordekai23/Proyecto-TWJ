@@ -11,10 +11,10 @@ export class EstaLogeadoService implements CanActivate {
   canActivate() {
     console.log("Intentando Entrar a la Vista");
     if (this._authService.estaLogeado) {
-      this._router.navigate(["Suscribirse"]);
+      this._router.navigate(["Principal"]);
       return true
     } else {
-      this._router.navigate(["Suscribirse"]);
+      this._router.navigate(["InicioCine"]);
       return false
     }
   }

@@ -17,6 +17,7 @@ import {TokenService} from "./services/token.service";
 import { VistaPrincipalComponent } from './Componentes/vista-principal/vista-principal.component';
 import { VistaPeliUnoComponent } from './Componentes/vista-peli-uno/vista-peli-uno.component';
 import { VistaPeliDosComponent } from './Componentes/vista-peli-dos/vista-peli-dos.component';
+import { PrincipalComponent } from './Componentes/principal/principal.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { VistaPeliDosComponent } from './Componentes/vista-peli-dos/vista-peli-d
     NuevaContrasenaComponent,
     VistaPrincipalComponent,
     VistaPeliUnoComponent,
-    VistaPeliDosComponent
+    VistaPeliDosComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
