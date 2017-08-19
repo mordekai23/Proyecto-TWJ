@@ -15,14 +15,15 @@ import {CineComponent} from "./Componentes/cine/cine.component";
 export const routes: Routes = [
   {
     path:"InicioCine",
-    component:CineComponent,
-    canActivate: [
-      EstaLogeadoService
-    ]
+    component:CineComponent
+
   },
   {
     path:"PeliUno",
-    component:VistaPeliUnoComponent
+    component:VistaPeliUnoComponent,
+    canActivate: [
+      EstaLogeadoService
+    ]
   },
   {
     path:"PeliDos",
@@ -39,7 +40,10 @@ export const routes: Routes = [
   },
   {
     path:"NuevaContasena",
-    component:NuevaContrasenaComponent
+    component:NuevaContrasenaComponent,
+    canActivate: [
+      EstaLogeadoService
+    ]
   }
 ];
 export const ModuloDeRutas: ModuleWithProviders =
